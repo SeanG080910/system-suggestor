@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<head>
+<script>
+//bool variables to represent the validity of a system for customer
+var caseta = true;
+var ra2select = true;
+var essentials = true;
+var inclusive = true;
+var hwqs = true;
+
+//list of questions
+const q1 = 'Do you want a professional installation or a "Do it yourself" (DIY) installation?';
+const q2 = 'How many square feet is your home approximately?';
+const q3 = 'What kind of devices do you wish to control?';
+const q4 = 'How many devices of each do you have?';
+const q5 = 'Do you want keypads?';
+const q6 = 'Which keypad aesthetic appeals to you the most?';
+const q7 = 'Would you like a button on one of your keypads to change what it does based on factors such as time of day or the status of other things in your house?';
+const q8 = 'Which dimmer aesthetic appeals to you the most?';
+
+//list of answers for each question
+const q1a = 'Professional';
+const q1b = 'DIY';
+
+
+//document.write('test1');
+
+//qestion1 start
+function question1(){
+    document.write('Do you want a professional installation or a "Do it yourself" (DIY) installation?');
+    document.write("<br>");
+    document.write('a: Professional');
+    document.write("<br>");
+    document.write('b: DIY');
+    document.write("<br>");
+    var response = prompt('Do you want a professional installation or a "Do it yourself" (DIY) installation?');
+    switch(response){
+        case 'a':
+         document.write("a was chosen");
+         document.write("<br>");
+        break;
+        case 'b':
+            document.write("b was chosen")
+            document.write("<br>");
+            hwqs = false;
+            inclusive = false;
+            break;
+        default:
+        document.write("error");
+        document.write("<br>");
+        break;
+    };
+};//question1 end
+
+//qestion2 start
+function question2(){
+    document.write('How many square feet is your home approximately?');
+    document.write("<br>");
+    document.write('a: Less than 2,000');
+    document.write("<br>");
+    document.write('b: 2,000 to 5,000');
+    document.write("<br>");
+    document.write('c: 5,000 to 10,000');
+    document.write("<br>");
+    document.write('d: 10,000 or more');
+    document.write("<br>");
+    var response = prompt('How many square feet is your home approximately?');
+    switch(response){
+        case 'a':
+         document.write("a was chosen");
+         document.write("<br>");
+        break;
+        case 'b':
+            document.write("b was chosen");
+            document.write("<br>");
+            caseta = false;
+            break;
+        case 'c':
+            document.write("c was chosen");
+            document.write("<br>");
+            caseta = false;
+            ra2select = false;
+            break;
+        case 'd':
+            document.write("d was chosen");
+            document.write("<br>");
+            caseta = false;
+            ra2select = false;
+            essentials = false;
+            inclusive = false;
+            break;
+        default:
+        document.write("error");
+        document.write("<br>");
+        break;
+    };
+};//question2 end
+
+
+
+//test code below
+/*function sayHello() {
+   document.write("Hello, Coding Ground!");
+}
+sayHello();*/
+//document.write('test2');
+question1();
+question2();
+//document.write('test3');
+</script>
+</head>
+<body>
+</body>
+</html>
